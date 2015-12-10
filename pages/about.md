@@ -20,7 +20,7 @@ index: 5
 
 </div>
 
-<div class="gallery">
+<div class="gallery wide">
 
 - <a title="" href="images/index/004.jpg" target="_blank"><img src="images/index/pw/004.jpg" alt="gallery thumbnail"></a>
 - <a title="" href="images/index/005.jpg" target="_blank"><img src="images/index/pw/005.jpg" alt="gallery thumbnail"></a>

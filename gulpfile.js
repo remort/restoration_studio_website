@@ -233,30 +233,6 @@ gulp.task('deploy', ['default'], function() {
     throw new Error('Deploying requires NODE_ENV to be set to production');
   }
 
-  // Create a tempory directory and
-  // checkout the existing gh-pages branch.
-  rm('-rf', '_tmp');
-  mkdir('_tmp');
-  cd('_tmp');
-  exec('git init');
-  exec('git remote add origin git@github.com:philipwalton/' + REPO + '.git');
-  exec('git pull origin gh-pages');
-
-  // Delete all the existing files and add
-  // the new ones from the build directory.
-  rm('-rf', './*');
-  cp('-rf', path.join('..', DEST, '/'), './');
-  exec('git add -A');
-
-  // Commit and push the changes to
-  // the gh-pages branch.
-  exec('git commit -m "Deploy site"');
-  exec('git branch -m gh-pages');
-  exec('git push origin gh-pages');
-
-  // Clean up.
-  cd('..');
-  rm('-rf', '_tmp');
-  rm('-rf', DEST);
+  // TODO: deploy ./build to hostline.ru via ftp or ssh
 
 });
