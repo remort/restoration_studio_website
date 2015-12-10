@@ -2,7 +2,6 @@
 template: default.html
 title: Иконопись
 slug: iconography
-index: 1
 ---
 
 <div class="iconography">

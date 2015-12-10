@@ -2,7 +2,6 @@
 template: default.html
 title: Реставрация
 slug: restoration
-index: 3
 ---
 
 ## "Евангелист Марк". Конец XVIII в. Невьянск.

@@ -2,7 +2,6 @@
 template: default.html
 title: Резюме М.В. Ратковского
 slug: resume
-index: 4
 ---
 
 ## Ратковский Максим Вячеславович

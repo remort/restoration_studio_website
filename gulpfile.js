@@ -25,6 +25,7 @@ var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var rsync = require('gulp-rsync');
 
 /**
  * The output directory for all the built files.
@@ -227,12 +228,16 @@ gulp.task('serve', ['default'], function() {
 });
 
 
-gulp.task('deploy', ['default'], function() {
-
-  if (process.env.NODE_ENV != 'production') {
-    throw new Error('Deploying requires NODE_ENV to be set to production');
-  }
-
-  // TODO: deploy ./build to hostline.ru via ftp or ssh
-
+gulp.task('upload', function() {
+      return gulp.src('build/**')
+	.pipe(rsync({
+          root: 'build',
+	  hostname: '83.69.230.40',
+	  username: 'vh258475',
+          destination: '/var/www/vh258475/data/www/ratkovskymv.ru',
+	  progress: true,
+	  compress: true,
+	}));
 });
+
+gulp.task('deploy', ['default', 'upload']);

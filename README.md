@@ -5,7 +5,7 @@ A fully static website about restoration studio in Ekaterinburg, Russia run by R
 [Github](https://github.com/remort/restoration_studio_website)
 [View Site](http://ratkovskymv.ru)
 
-## Viewing the Site Locally
+## Viewing the site locally
 
 The ratkovskymv site can be built with [Node.js](http://nodejs.org/). If you have Node.js installed on your system, you can run the following commands to build and serve a local copy.
 

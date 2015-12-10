@@ -2,7 +2,6 @@
 template: default.html
 title: Рекомендации
 slug: recommendations
-index: 2
 ---
 
 ## Российской академии художеств
