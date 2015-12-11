@@ -106,30 +106,30 @@ body{
 			&.noindent{
 				text-indent: 0;
 			}
-		}
-		
-		header{
-			background: none;
-
-			&.caption p{
+			&.inline{
 				display: inline-block;
 				width: 30%;
-				
-				&.wide{
-					width: 60%;
-				}
+			}
+			&.wide{
+				width: 60%;
+			}
+			&.map a{
+				background: url(../images/address.jpg);
+				display: block;
+				width: 547px;
+				height: 400px;
 			}
 		}
 
-		ul{
-			margin: 10px 0;
+		ul, ol{
+			margin: 10px 0 20px 0;
 		}
 
 		span{
 			font-weight: bold;
 		}
 		
-		#service-list{
+		.service-list{
 			background-color: #fffcc9;
 			background: linear-gradient(to right, #fffcc9, #fff);
 			width:550px;
@@ -139,35 +139,30 @@ body{
 		}
 		
 		.gallery{ 
-			ul{
-				display: flex;
-				justify-content: space-around;
-				margin: 0 auto;
-				width: 550px;
-			}
+			display: flex;
+			justify-content: space-around;
+			margin: 0 auto;
+			width: 550px;
 			li{
 				display: inline-block;
 				margin:0 20px 20px 0;
 				max-width: 150px;
-			    text-align: center;
-			    color: #710000;
+				text-align: center;
+				color: #710000;
 			}
 			a{
 				display: block;
 				margin-bottom: 5px;
 			}
+			&.wide{
+				width: 700px;
+			}
 		}
 
-		.wide ul{
-			width: 700px;
-		}
-		
 		.iconography{
-			ul{
-				max-width: 600px;
-				margin: 0 auto;
-				text-align: center;
-			}
+			max-width: 600px;
+			margin: 0 auto;
+			text-align: center;
 
 			li{
 				display: inline-block;

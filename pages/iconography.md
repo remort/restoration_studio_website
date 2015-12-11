@@ -4,8 +4,6 @@ title: Иконопись
 slug: iconography
 ---
 
-<div class="iconography">
-
 - <a title="" href="images/iconography/006.jpg" target="_blank"><img src="images/iconography/pw/006.jpg" alt="gallery thumbnail"></a>
 - <a title="" href="images/iconography/008.jpg" target="_blank"><img src="images/iconography/pw/008.jpg" alt="gallery thumbnail"></a>
 - <a title="" href="images/iconography/007.jpg" target="_blank"><img src="images/iconography/pw/007.jpg" alt="gallery thumbnail"></a>
@@ -18,5 +16,4 @@ slug: iconography
 - <a title="" href="images/iconography/011.jpg" target="_blank"><img src="images/iconography/pw/011.jpg" alt="gallery thumbnail"></a>
 - <a title="" href="images/iconography/010.jpg" target="_blank"><img src="images/iconography/pw/010.jpg" alt="gallery thumbnail"></a>
 - <a title="" href="images/iconography/012.jpg" target="_blank"><img src="images/iconography/pw/012.jpg" alt="gallery thumbnail"></a>
-
-</div>
+{iconography}

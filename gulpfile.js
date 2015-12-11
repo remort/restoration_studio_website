@@ -26,6 +26,7 @@ var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rsync = require('gulp-rsync');
+var classy = require("remarkable-classy");
 
 /**
  * The output directory for all the built files.
@@ -95,6 +96,7 @@ function renderMarkdown() {
       return lang ? hljs.highlight(lang, code).value : he.escape(code);
     }
   });
+  markdown.use(classy);
   return through.obj(function (file, enc, cb) {
     try {
       if (path.extname(file.path) == '.md') {
@@ -178,7 +180,6 @@ gulp.task('less', function() {
         .pipe(less())
         .pipe(minifyCSS())
 	.pipe(gulp.dest(path.join(DEST, 'styles')));
-        //.pipe(gulp.dest('build/styles'))
 })
 
 gulp.task('lint', function() {
