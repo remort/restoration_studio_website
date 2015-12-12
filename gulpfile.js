@@ -172,14 +172,19 @@ gulp.task('html', function() {
 
 gulp.task('images', function() {
   return gulp.src('./assets/images/**/*')
-      .pipe(gulp.dest(path.join(DEST, 'images')));
+	.pipe(rename(function(path) {
+		if (path.basename == 'favicon') {
+			path.dirname='../';
+		}
+	}))
+	.pipe(gulp.dest(path.join(DEST, 'images')));
 });
 
 gulp.task('less', function() {
     gulp.src(['assets/css/styles.less'])
         .pipe(less())
         .pipe(minifyCSS())
-	.pipe(gulp.dest(path.join(DEST, 'styles')));
+		.pipe(gulp.dest(path.join(DEST, 'styles')));
 })
 
 gulp.task('lint', function() {
