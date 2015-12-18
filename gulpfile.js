@@ -138,13 +138,7 @@ function renderTemplate() {
 
 
 gulp.task('html', function() {
-
-  var baseData = require('./config.json');
-  var overrides = {
-    baseUrl: isProd() ? '/' + REPO + '/' : '/',
-    env: isProd() ? 'prod' : 'dev'
-  };
-  var siteData = assign(baseData, overrides);
+  var siteData = require('./config.json');
 
   return gulp.src(['./pages/**/*'], {base: process.cwd()})
       .pipe(plumber({errorHandler: streamError}))
@@ -230,7 +224,7 @@ gulp.task('serve', ['default'], function() {
   gulp.watch('./assets/css/**/*.less', ['less']);
   gulp.watch('./assets/images/*', ['images']);
   gulp.watch('./assets/javascript/*', ['javascript']);
-  gulp.watch(['*.html', './pages/*', './templates/*'], ['html']);
+  gulp.watch(['./pages/*', './templates/*'], ['html']);
 });
 
 
